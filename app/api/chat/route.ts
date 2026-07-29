@@ -15,8 +15,9 @@ function coerceMessages(input: unknown): ChatMessage[] {
   const result: ChatMessage[] = [];
   for (const item of input) {
     if (!item || typeof item !== 'object') continue;
-    const role = (item as any).role;
-    const content = (item as any).content;
+    const record = item as Record<string, unknown>;
+    const role = record.role;
+    const content = record.content;
     if ((role !== 'user' && role !== 'assistant') || typeof content !== 'string') continue;
 
     // Basic size guard.

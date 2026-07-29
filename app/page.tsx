@@ -52,7 +52,7 @@ export default function Home() {
               <ButtonLink href="/Priyanshu_Tyagi_Resume.pdf" variant="secondary" target="_blank" download>
                 Download Resume (ATS)
               </ButtonLink>
-              <ButtonLink href="#contact" variant="ghost">
+              <ButtonLink href="#contact" variant="secondary">
                 Let’s talk
               </ButtonLink>
             </div>

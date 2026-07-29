@@ -8,5 +8,9 @@ node_modules/
 out/
 .vercel/
 
+# PDFs: keep only public-facing assets
+*.pdf
+!public/*.pdf
+
 # local resume text extraction output
 extracted_*.txt

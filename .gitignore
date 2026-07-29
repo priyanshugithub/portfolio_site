@@ -14,3 +14,13 @@ out/
 
 # local resume text extraction output
 extracted_*.txt
+
+# Images: keep only public-facing assets
+*.jpeg
+*.jpg
+*.png
+*.webp
+!public/*.jpeg
+!public/*.jpg
+!public/*.png
+!public/*.webp

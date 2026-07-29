@@ -1,6 +1,7 @@
 import ButtonLink from '../components/ButtonLink';
 import DigitalTwinChat from '../components/DigitalTwinChat';
 import { profile } from '../lib/profile';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -8,6 +9,23 @@ export default function Home() {
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <header className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
           <div className="space-y-7 animate-fadeUp">
+            <div className="flex items-center gap-4">
+              <div className="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-core/20 shadow-soft dark:ring-sky-500/20">
+                <Image
+                  src="/Profile_Pic.jpeg"
+                  alt={`${profile.name} headshot`}
+                  fill
+                  priority
+                  sizes="64px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-1">
+                <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">{profile.name}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">{profile.location}</p>
+              </div>
+            </div>
+
             <p className="inline-flex w-fit rounded-full bg-core/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-core dark:bg-sky-500/15 dark:text-sky-200">
               {profile.location} · product engineering + retail ops
             </p>

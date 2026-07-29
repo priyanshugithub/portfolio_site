@@ -1,2 +1,12 @@
 .env
-node_modules
+.env.*
+!.env.example
+
+node_modules/
+
+.next/
+out/
+.vercel/
+
+# local resume text extraction output
+extracted_*.txt

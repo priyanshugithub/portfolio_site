@@ -1,74 +1,6 @@
 import ButtonLink from '../components/ButtonLink';
-
-const experience = [
-  {
-    role: 'Trainee Lead In Fashion',
-    company: 'Inditex',
-    period: 'Apr 2026 - Jun 2026',
-    location: 'Berlin, Germany',
-    bullets: [
-      'Led a 3-month leadership program focused on commercial and operations analytics for retail management.',
-      'Identified onboarding bottlenecks and supported technical decisions around AI architecture and workflows.',
-      'Improved real-time metrics using workflow agents and operational orchestration.',
-    ],
-  },
-  {
-    role: 'Sales Associate',
-    company: 'UNIQLO',
-    period: 'Sep 2025 - Dec 2025',
-    location: 'Berlin, Germany',
-    bullets: [
-      'Delivered customer-first service in German and English on a high-volume retail floor.',
-      'Managed product presentation, stock replenishment, and tailored customer follow-up.',
-      'Created smooth customer journeys through reservations and in-store tailoring support.',
-    ],
-  },
-  {
-    role: 'Front End Engineer',
-    company: 'GoBOLT',
-    period: 'Sep 2020 - Nov 2021',
-    location: 'Gurugram, India',
-    bullets: [
-      'Upgraded SaaS products with React, Redux, and modern front-end architecture.',
-      'Built a trip optimization tool that boosted route efficiency by 34%.',
-      'Streamlined shipment and invoicing flows using GraphQL and API integrations.',
-    ],
-  },
-  {
-    role: 'React Front End Engineer',
-    company: 'NorthLoop',
-    period: 'Oct 2019 - Aug 2020',
-    location: 'Gurugram, India',
-    bullets: [
-      'Integrated Stripe for secure cross-border payments across 12 countries.',
-      'Refactored legacy React applications to improve performance and maintainability.',
-      'Delivered reusable, scalable UI components with TypeScript and Hooks.',
-    ],
-  },
-];
-
-const skills = ['Customer Experience', 'Visual Merchandising', 'Fashion Retail', 'React', 'TypeScript', 'AI Workflows', 'Product Design'];
-
-const projects = [
-  {
-    title: 'Trip Optimization Tool',
-    description:
-      'A front-end heavy route planning experience that improved logistics efficiency and decision speed through smart data visualisation.',
-    tags: ['React', 'Redux', 'UX', 'Analytics'],
-  },
-  {
-    title: 'Cross-border Payments',
-    description:
-      'Payment flows and dashboards for international merchants with Stripe integration, strong reliability, and reusable UI foundations.',
-    tags: ['React', 'TypeScript', 'Stripe'],
-  },
-  {
-    title: 'AI-enabled Retail Operations (Concept)',
-    description:
-      'A future case study focused on workflow agents, real-time metrics, and onboarding automation for store operations teams.',
-    tags: ['AI Workflows', 'Dashboards', 'Ops'],
-  },
-];
+import DigitalTwinChat from '../components/DigitalTwinChat';
+import { profile } from '../lib/profile';
 
 export default function Home() {
   return (
@@ -77,16 +9,15 @@ export default function Home() {
         <header className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
           <div className="space-y-7 animate-fadeUp">
             <p className="inline-flex w-fit rounded-full bg-core/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-core dark:bg-sky-500/15 dark:text-sky-200">
-              Berlin-based product engineer
+              {profile.location} · product engineering + retail ops
             </p>
 
             <div className="space-y-5">
               <h1 className="text-4xl font-semibold tracking-tight text-ink dark:text-slate-50 sm:text-6xl">
-                Priyanshu Tyagi
+                {profile.name}
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-                Product-minded software leader blending retail operations, customer experience, and modern engineering.
-                I build scalable digital products with polished UX, data-driven decisions, and a future-ready portfolio outlook.
+                {profile.headline}
               </p>
             </div>
 
@@ -98,7 +29,10 @@ export default function Home() {
                 Career journey
               </ButtonLink>
               <ButtonLink href="/Profile.pdf" variant="secondary" target="_blank" download>
-                Download CV
+                Download CV (LinkedIn)
+              </ButtonLink>
+              <ButtonLink href="/Priyanshu_Tyagi_Resume.pdf" variant="secondary" target="_blank" download>
+                Download Resume (ATS)
               </ButtonLink>
               <ButtonLink href="#contact" variant="ghost">
                 Let’s talk
@@ -113,9 +47,9 @@ export default function Home() {
             <div className="relative space-y-6">
               <div className="rounded-3xl bg-gradient-to-br from-core to-highlight p-6 text-white shadow-soft">
                 <p className="text-sm uppercase tracking-[0.24em] text-slate-200">Current focus</p>
-                <h2 className="mt-4 text-2xl font-semibold">AI-enabled operations and retail-led product growth</h2>
+                <h2 className="mt-4 text-2xl font-semibold">{profile.focusNow.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-slate-100">
-                  Driving digital transformation across people, process, and product with rigor, empathy, and commercial insight.
+                  {profile.focusNow.description}
                 </p>
               </div>
 
@@ -126,12 +60,32 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Contact</p>
-                  <p className="mt-2 text-lg font-semibold text-ink dark:text-slate-100">priyanshumain@gmail.com</p>
+                  <p className="mt-2 text-lg font-semibold text-ink dark:text-slate-100">{profile.email}</p>
+                  <a
+                    className="mt-2 inline-flex text-sm font-semibold text-slate-600 hover:text-core dark:text-slate-300 dark:hover:text-sky-300"
+                    href={profile.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LinkedIn
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </header>
+
+        <section id="highlights" className="mt-16">
+          <div className="grid gap-6 rounded-[2rem] border border-slate-200/70 bg-white p-8 shadow-glow dark:border-slate-900/70 dark:bg-slate-950/60 sm:p-10 lg:grid-cols-4">
+            {profile.impactHighlights.map((h) => (
+              <div key={`${h.metric}-${h.label}`} className="rounded-[1.5rem] bg-slate-50 p-6 dark:bg-slate-900/30">
+                <p className="text-3xl font-semibold tracking-tight text-ink dark:text-slate-50">{h.metric}</p>
+                <p className="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200">{h.label}</p>
+                <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{h.context}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <section
           id="about"
@@ -141,18 +95,16 @@ export default function Home() {
             <div className="max-w-3xl">
               <h2 className="text-3xl font-semibold tracking-tight text-ink dark:text-slate-50">About</h2>
               <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-                I bring a unique intersection of customer-facing retail leadership and product engineering. My experience ranges
-                from front-line operations at global retail brands to building enterprise-grade digital platforms for logistics and
-                payments.
+                {profile.summary}
               </p>
               <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300">
-                I thrive on translating business challenges into elegant technical solutions—especially where AI, analytics, and user
-                experience converge to create seamless outcomes.
+                Today, I’m especially interested in AI adoption that is practical: comparing models, setting up feedback loops, and
+                integrating tools into workflows so teams actually ship faster and make better decisions.
               </p>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2">
-              {skills.map((skill) => (
+              {profile.skills.map((skill) => (
                 <div
                   key={skill}
                   className="rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-900/40 dark:text-slate-200"
@@ -160,6 +112,57 @@ export default function Home() {
                   {skill}
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-900/70 dark:bg-slate-950/60">
+              <h3 className="text-xl font-semibold text-ink dark:text-slate-50">Tech stack</h3>
+              <div className="mt-5 space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                <p>
+                  <span className="font-semibold text-ink dark:text-slate-100">Frontend:</span> {profile.techStack.frontend.join(', ')}
+                </p>
+                <p>
+                  <span className="font-semibold text-ink dark:text-slate-100">Backend:</span> {profile.techStack.backend.join(', ')}
+                </p>
+                <p>
+                  <span className="font-semibold text-ink dark:text-slate-100">Delivery:</span> {profile.techStack.delivery.join(', ')}
+                </p>
+                <p>
+                  <span className="font-semibold text-ink dark:text-slate-100">AI:</span> {profile.techStack.ai.join(' · ')}
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-900/70 dark:bg-slate-950/60">
+              <h3 className="text-xl font-semibold text-ink dark:text-slate-50">Certifications & languages</h3>
+              <div className="mt-5 grid gap-6 sm:grid-cols-2">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Certifications</p>
+                  <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    {profile.certifications.map((c) => (
+                      <li key={c}>• {c}</li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Learning now</p>
+                  <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    {profile.currentLearning.map((c) => (
+                      <li key={c}>• {c}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Languages</p>
+                  <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    {profile.languages.map((l) => (
+                      <li key={l.name}>
+                        <span className="font-semibold text-ink dark:text-slate-100">{l.name}</span> — {l.level}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -175,7 +178,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-6">
-              {experience.map((item) => (
+              {profile.experience.map((item) => (
                 <article
                   key={`${item.company}-${item.role}`}
                   className="group rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-glow dark:border-slate-900/70 dark:bg-slate-950/60"
@@ -238,6 +241,10 @@ export default function Home() {
           </aside>
         </section>
 
+        <section className="mt-24">
+          <DigitalTwinChat />
+        </section>
+
         <section id="projects" className="mt-24">
           <div className="rounded-[2rem] border border-slate-200/70 bg-white p-10 shadow-glow dark:border-slate-900/70 dark:bg-slate-950/60">
             <h2 className="text-3xl font-semibold tracking-tight text-ink dark:text-slate-50">Selected work</h2>
@@ -246,7 +253,7 @@ export default function Home() {
             </p>
 
             <div className="mt-10 grid gap-6 lg:grid-cols-3">
-              {projects.map((project) => (
+              {profile.projects.map((project) => (
                 <article
                   key={project.title}
                   className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-7 shadow-sm transition hover:-translate-y-1 hover:bg-white hover:shadow-glow dark:border-slate-900/70 dark:bg-slate-900/30 dark:hover:bg-slate-950/60"
@@ -278,8 +285,11 @@ export default function Home() {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href="mailto:priyanshumain@gmail.com" variant="primary">
-                  Email: priyanshumain@gmail.com
+                <ButtonLink href={`mailto:${profile.email}`} variant="primary">
+                  Email: {profile.email}
+                </ButtonLink>
+                <ButtonLink href={profile.linkedin} variant="secondary" target="_blank">
+                  LinkedIn
                 </ButtonLink>
                 <ButtonLink href="#projects" variant="secondary">
                   View work

@@ -46,9 +46,6 @@ export default function Home() {
               <ButtonLink href="#experience" variant="secondary">
                 Career journey
               </ButtonLink>
-              <ButtonLink href="/Profile.pdf" variant="secondary" target="_blank" download>
-                Download CV (LinkedIn)
-              </ButtonLink>
               <ButtonLink href="/Priyanshu_Tyagi_Resume.pdf" variant="secondary" target="_blank" download>
                 Download Resume (ATS)
               </ButtonLink>

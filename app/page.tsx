@@ -304,7 +304,8 @@ export default function Home() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink href={`mailto:${profile.email}`} variant="primary">
-                  Email: {profile.email}
+                  <span className="sm:hidden">Email me</span>
+                  <span className="hidden sm:inline">Email: {profile.email}</span>
                 </ButtonLink>
                 <ButtonLink href={profile.linkedin} variant="secondary" target="_blank">
                   LinkedIn

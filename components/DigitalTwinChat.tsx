@@ -12,7 +12,7 @@ type Msg = {
 const starterPrompts = [
   'Summarise Priyanshu’s career in 5 bullets.',
   'What roles has Priyanshu had in Berlin?',
-  'Which skills are strongest for product engineering roles?',
+  'Which frontend development skills are strongest?',
   'Tell me about the GoBOLT trip optimization impact.',
 ];
 

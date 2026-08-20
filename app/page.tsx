@@ -27,7 +27,7 @@ export default function Home() {
             </div>
 
             <p className="inline-flex w-fit rounded-full bg-core/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-core dark:bg-sky-500/15 dark:text-sky-200">
-              {profile.location} · product engineering + retail ops
+              {profile.location} · frontend development + AI workflows
             </p>
 
             <div className="space-y-5">
@@ -189,8 +189,8 @@ export default function Home() {
             <div className="rounded-[2rem] border border-slate-200/70 bg-white p-10 shadow-glow dark:border-slate-900/70 dark:bg-slate-950/60">
               <h2 className="text-3xl font-semibold tracking-tight text-ink dark:text-slate-50">Experience</h2>
               <p className="mt-4 text-slate-600 dark:text-slate-300">
-                A pathway shaped by leadership, customer impact, and technical product delivery across retail, logistics, and digital
-                services.
+                Frontend development experience shaped by customer impact, operational problem-solving, and digital services across
+                retail and logistics.
               </p>
             </div>
 
@@ -227,11 +227,11 @@ export default function Home() {
             <div className="rounded-[2rem] bg-core p-8 text-white shadow-glow">
               <h3 className="text-2xl font-semibold">Future portfolio</h3>
               <p className="mt-4 text-base leading-7 text-slate-200">
-                Building a portfolio of modern digital experiences that combine operational efficiency, intuitive design, and scalable
-                engineering.
+                Building modern digital experiences with strong frontend foundations while exploring AI integrations and workflow
+                automation.
               </p>
               <div className="mt-8 grid gap-3">
-                {['Enterprise product concepts', 'AI-driven retail workflows', 'Customer experience projects'].map((label) => (
+                {['Frontend applications', 'AI integrations and workflows', 'Customer experience projects'].map((label) => (
                   <div
                     key={label}
                     className="rounded-full bg-white/10 px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
@@ -296,7 +296,8 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-semibold tracking-tight text-ink dark:text-slate-50">Let’s build something polished</h2>
               <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300">
-                If you’re hiring or collaborating on product engineering, retail ops tooling, or AI-enabled workflows—reach out.
+                If you’re hiring or collaborating on frontend development, customer-facing applications, or AI-enabled workflows—reach
+                out.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -321,7 +322,7 @@ export default function Home() {
                 <li>• Reliable engineering practices and iteration speed</li>
               </ul>
               <p className="mt-6 text-sm text-slate-200">
-                Available for roles in Berlin / EU (or remote) across product engineering and customer-facing platforms.
+                Available for frontend development roles in Berlin / EU (or remote), and collaborations around practical AI workflows.
               </p>
             </div>
           </div>

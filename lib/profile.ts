@@ -19,10 +19,10 @@ export const profile = {
   email: 'priyanshumain@gmail.com',
   linkedin: 'https://www.linkedin.com/in/priyanshutyagi1996',
 
-  headline: 'IT professional building frontend applications and practical AI workflows for business processes.',
+  headline: 'Frontend developer with 3+ years of experience building React applications and exploring AI integrations and workflows.',
 
   focusNow: {
-    title: 'AI-enabled business workflows and product engineering',
+    title: 'Exploring AI integrations and workflows',
     description:
       'Exploring practical AI integrations through agentic workflows, LLM evaluation, RAG systems, and monitoring loops that improve real business processes.',
   },
@@ -51,7 +51,7 @@ export const profile = {
   ],
 
   summary:
-    'I am an IT professional with 3+ years of hands-on experience building frontend applications with ReactJS and JavaScript, alongside backend technologies such as SQL and Dataverse. After a study break, I am restarting my career with a strong interest in integrating AI tools into business processes, fine-tuning LLMs, and building RAG systems.',
+    'I am a frontend developer with 3+ years of hands-on experience building applications with ReactJS and JavaScript, alongside backend technologies such as SQL and Dataverse. After a study break, I am restarting my career while exploring how AI integrations, LLM evaluation, RAG systems, and workflow automation can support real business processes.',
 
   skills: [
     'JavaScript',

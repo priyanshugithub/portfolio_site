@@ -46,7 +46,7 @@ export default function Home() {
               <ButtonLink href="#experience" variant="secondary">
                 Career journey
               </ButtonLink>
-              <ButtonLink href="/Priyanshu_Tyagi_Resume.pdf" variant="secondary" target="_blank" download>
+              <ButtonLink href="/Priyanshu_Tyagi.pdf" variant="secondary" target="_blank" download>
                 Download Resume (ATS)
               </ButtonLink>
               <ButtonLink href="#contact" variant="secondary">
@@ -71,7 +71,7 @@ export default function Home() {
               <div className="grid gap-4 rounded-3xl bg-slate-50 p-6 dark:bg-slate-900/40">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Location</p>
-                  <p className="mt-2 text-lg font-semibold text-ink dark:text-slate-100">Berlin, Germany</p>
+                  <p className="mt-2 text-lg font-semibold text-ink dark:text-slate-100">{profile.location}</p>
                 </div>
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Contact</p>
@@ -176,6 +176,8 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
+                  <p className="mt-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Interests</p>
+                  <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{profile.interests.join(' · ')}</p>
                 </div>
               </div>
             </div>
@@ -243,14 +245,12 @@ export default function Home() {
             <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-900/70 dark:bg-slate-950/60">
               <h3 className="text-2xl font-semibold text-ink dark:text-slate-50">Education</h3>
               <dl className="mt-6 space-y-4 text-slate-600 dark:text-slate-300">
-                <div>
-                  <dt className="font-semibold text-ink dark:text-slate-100">MS Information Technology</dt>
-                  <dd>Berlin School of Business & Innovation · 2023–2025</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-ink dark:text-slate-100">MBA International Marketing</dt>
-                  <dd>IU International University of Applied Sciences · 2021–2023</dd>
-                </div>
+                {profile.education.map((item) => (
+                  <div key={item.degree}>
+                    <dt className="font-semibold text-ink dark:text-slate-100">{item.degree}</dt>
+                    <dd>{item.school} · {item.period}</dd>
+                  </div>
+                ))}
               </dl>
             </div>
           </aside>

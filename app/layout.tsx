@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Priyanshu Tyagi | Product and Engineering Leader',
-  description: 'Professional portfolio site for Priyanshu Tyagi, showcasing career journey and future portfolio vision.',
+  title: 'Priyanshu Tyagi | IT Professional',
+  description: 'Portfolio of Priyanshu Tyagi, an IT professional working across frontend engineering and practical AI workflows.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

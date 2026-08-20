@@ -19,12 +19,12 @@ export const profile = {
   email: 'priyanshumain@gmail.com',
   linkedin: 'https://www.linkedin.com/in/priyanshutyagi1996',
 
-  headline: 'Product-minded engineer blending retail operations, customer experience, and modern frontend systems.',
+  headline: 'IT professional building frontend applications and practical AI workflows for business processes.',
 
   focusNow: {
-    title: 'AI-enabled operations and retail-led product growth',
+    title: 'AI-enabled business workflows and product engineering',
     description:
-      'Working at the intersection of store operations, analytics, and product engineering — with a growing focus on practical AI integrations (agents, evaluation, and RAG-style workflows) for real business processes.',
+      'Exploring practical AI integrations through agentic workflows, LLM evaluation, RAG systems, and monitoring loops that improve real business processes.',
   },
 
   impactHighlights: [
@@ -51,32 +51,37 @@ export const profile = {
   ],
 
   summary:
-    'I bring a unique intersection of customer-facing retail leadership and product engineering — from front-line operations at global retail brands in Berlin to building enterprise-grade dashboards and fintech experiences. I like turning messy business problems into simple, measurable, user-friendly solutions.',
+    'I am an IT professional with 3+ years of hands-on experience building frontend applications with ReactJS and JavaScript, alongside backend technologies such as SQL and Dataverse. After a study break, I am restarting my career with a strong interest in integrating AI tools into business processes, fine-tuning LLMs, and building RAG systems.',
 
   skills: [
-    'Customer Experience',
-    'Retail Operations Analytics',
-    'Visual Merchandising',
-    'Stakeholder Communication',
-    'React',
-    'TypeScript',
-    'Redux',
+    'JavaScript',
+    'HTML/CSS',
     'Tailwind CSS',
-    'Data Visualization',
-    'API Integrations (GraphQL/REST)',
-    'AI Workflows (Agents / RAG fundamentals)',
-    'Product Design',
+    'TypeScript',
+    'ReactJS',
+    'Redux',
+    'SQL',
+    'Dataverse',
+    'Agile',
+    'Scrum',
+    'Git',
+    'GitHub',
+    'GitLab',
+    'Agentic AI',
+    'LLMs and RAG',
+    'n8n',
   ],
 
   techStack: {
-    frontend: ['React', 'TypeScript', 'Redux', 'Tailwind CSS', 'Styled Components', 'HTML', 'CSS', 'JavaScript'],
+    frontend: ['ReactJS', 'TypeScript', 'Redux', 'Tailwind CSS', 'Styled Components', 'HTML/CSS', 'JavaScript'],
     backend: ['Python (Flask)', 'SQL', 'Dataverse'],
     delivery: ['Agile', 'Scrum', 'Git', 'GitHub', 'GitLab'],
     ai: [
-      'LLM evaluation & comparison (practical use cases)',
-      'Monitoring & feedback loops for improving outputs',
-      'Agentic workflows (early stage)',
-      'n8n automations (learning)',
+      'Agentic AI',
+      'LLMs and RAG',
+      'LLM evaluation and comparison',
+      'Monitoring and feedback loops',
+      'n8n, Cursor, Vibe Code, OpenClaw',
     ],
   },
 
@@ -86,28 +91,25 @@ export const profile = {
     { name: 'German', level: 'B1 (actively learning)' },
   ],
 
-  certifications: [
-    'Circular Economy: An Introduction',
-    'Driving Business towards the Sustainable Development Goals',
-    'Mobile Web Specialist',
-    'Full Stack Web Developer Nanodegree',
-  ],
+  interests: ['Reading', 'Sports', 'Cooking', 'Painting'],
+
+  certifications: [],
 
   currentLearning: [
-    'Udemy: AI Builder — agents, voice agents & automations in n8n (in progress)',
-    'Udemy: AI Engineer Core Track — LLM engineering, RAG, QLoRA, agents (in progress)',
+    'Udemy: AI Builder: Create Agents, Voice Agents & Automations in n8n (currently pursuing)',
+    'Udemy: AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents (currently pursuing)',
   ],
 
   education: [
     {
-      degree: 'MS Information Technology',
+      degree: 'MSc IT Management',
       school: 'Berlin School of Business & Innovation (BSBI)',
       period: 'May 2023 – May 2025',
     },
     {
       degree: 'MBA International Marketing',
       school: 'IU International University of Applied Sciences',
-      period: 'Nov 2021 – Apr 2023',
+      period: 'Oct 2021 – Mar 2023',
     },
     {
       degree: 'B.Tech Computer Science & Engineering',
@@ -118,7 +120,7 @@ export const profile = {
 
   experience: [
     {
-      role: 'Trainee Lead In Fashion',
+      role: 'Trainee Lead in Fashion',
       company: 'Inditex',
       period: 'Apr 2026 – Jun 2026',
       location: 'Berlin, Germany',
@@ -130,8 +132,8 @@ export const profile = {
       ],
     },
     {
-      role: 'Sales Associate',
-      company: 'UNIQLO',
+      role: 'Sales Assistant',
+      company: 'Uniqlo',
       period: 'Sep 2025 – Dec 2025',
       location: 'Berlin, Germany',
       domain: 'Retail & Operations',
@@ -142,26 +144,8 @@ export const profile = {
       ],
     },
     {
-      role: 'Kitchen Staff Member',
-      company: 'beets&roots',
-      period: 'Aug 2023 – Sep 2025',
-      location: 'Berlin, Germany',
-      domain: 'Operations',
-      bullets: [
-        'Built reliability and pace in high-throughput service operations while studying.',
-      ],
-    },
-    {
-      role: 'Warehouse Associate',
-      company: 'ila-solution GmbH',
-      period: 'Aug 2022 – Sep 2023',
-      location: 'Berlin, Germany',
-      domain: 'Operations',
-      bullets: ['Sorting, scanning, labeling, storage handling, and provisioning goods for the sales floor.'],
-    },
-    {
       role: 'Front End Engineer',
-      company: 'GoBOLT',
+      company: 'GoBolt Solutions',
       period: 'Sep 2020 – Nov 2021',
       location: 'Gurugram, India',
       domain: 'Product Engineering',
@@ -172,7 +156,7 @@ export const profile = {
       ],
     },
     {
-      role: 'React Front End Engineer',
+      role: 'React Frontend Engineer',
       company: 'NorthLoop',
       period: 'Oct 2019 – Aug 2020',
       location: 'Gurugram, India',
@@ -184,8 +168,8 @@ export const profile = {
       ],
     },
     {
-      role: 'Junior Front End Developer',
-      company: 'LeapTure LLC',
+      role: 'Junior Frontend Engineer',
+      company: 'Leapture LLC',
       period: 'Aug 2018 – Sep 2019',
       location: 'Remote',
       domain: 'Product Engineering',

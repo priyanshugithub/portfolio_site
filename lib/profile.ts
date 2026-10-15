@@ -18,8 +18,9 @@ export const profile = {
   location: 'Berlin, Germany',
   email: 'priyanshumain@gmail.com',
   linkedin: 'https://www.linkedin.com/in/priyanshutyagi1996',
+  availability: 'Open to Fullstack Engineer roles in Munich. Available immediately and open to relocation.',
 
-  headline: 'Frontend developer with 3+ years of experience building React applications and exploring AI integrations and workflows.',
+  headline: 'Fullstack Engineer with 3+ years of experience building customer-facing applications with React, TypeScript, APIs, and AI integrations.',
 
   focusNow: {
     title: 'Exploring AI integrations and workflows',
@@ -51,7 +52,7 @@ export const profile = {
   ],
 
   summary:
-    'I am a frontend developer with 3+ years of hands-on experience building applications with ReactJS and JavaScript, alongside backend technologies such as SQL and Dataverse. After a study break, I am restarting my career while exploring how AI integrations, LLM evaluation, RAG systems, and workflow automation can support real business processes.',
+    'I am a Fullstack Engineer with 3+ years of experience building customer-facing applications with React, TypeScript, and JavaScript. I have integrated REST and GraphQL APIs and worked with Node.js, Express, PostgreSQL, Python, and Flask across product and personal projects. I also build AI-enabled applications with LLM APIs, RAG, and agentic workflows.',
 
   skills: [
     'JavaScript',
@@ -60,8 +61,14 @@ export const profile = {
     'TypeScript',
     'ReactJS',
     'Redux',
+    'Next.js',
+    'Node.js',
+    'Express.js',
+    'PostgreSQL',
     'SQL',
-    'Dataverse',
+    'Python',
+    'Flask',
+    'Docker',
     'Agile',
     'Scrum',
     'Git',
@@ -73,9 +80,9 @@ export const profile = {
   ],
 
   techStack: {
-    frontend: ['ReactJS', 'TypeScript', 'Redux', 'Tailwind CSS', 'Styled Components', 'HTML/CSS', 'JavaScript'],
-    backend: ['Python (Flask)', 'SQL', 'Dataverse'],
-    delivery: ['Agile', 'Scrum', 'Git', 'GitHub', 'GitLab'],
+    frontend: ['ReactJS', 'Next.js', 'TypeScript', 'Redux', 'Tailwind CSS', 'Styled Components', 'HTML/CSS', 'JavaScript'],
+    backend: ['Node.js', 'Express.js', 'PostgreSQL', 'Python (Flask)', 'SQL', 'REST APIs', 'GraphQL'],
+    delivery: ['Docker', 'Agile', 'Scrum', 'Git', 'GitHub', 'GitLab'],
     ai: [
       'Agentic AI',
       'LLMs and RAG',
@@ -119,6 +126,19 @@ export const profile = {
   ],
 
   experience: [
+    {
+      role: 'Frontend Development Intern',
+      company: 'irefill',
+      period: 'Jan 2026 – Present',
+      location: 'Remote',
+      domain: 'Product Engineering',
+      bullets: [
+        'Migrated a legacy PHP multi-page website to reusable, responsive React and Next.js components.',
+        'Integrated the existing PHP backend through a JSON API layer and implemented server-side rendering for SEO and initial page performance.',
+        'Used Tailwind CSS for responsive UI development and Claude Code to accelerate codebase analysis, migration, and debugging.',
+        'Identified a live spam-link injection vulnerability during a technical audit and documented remediation steps.',
+      ],
+    },
     {
       role: 'Trainee Lead in Fashion',
       company: 'Inditex',
@@ -168,7 +188,7 @@ export const profile = {
       ],
     },
     {
-      role: 'Junior Frontend Engineer',
+      role: 'Junior Fullstack Developer',
       company: 'Leapture LLC',
       period: 'Aug 2018 – Sep 2019',
       location: 'Remote',
@@ -182,6 +202,12 @@ export const profile = {
   ] satisfies ExperienceItem[],
 
   projects: [
+    {
+      title: 'LLM-Powered RAG Portfolio Assistant',
+      description:
+        'A deployed portfolio assistant built with Next.js, Tailwind CSS, and OpenRouter. Its responses are grounded in portfolio data; when information is missing, it says so instead of guessing.',
+      tags: ['Next.js', 'Tailwind CSS', 'OpenRouter', 'LLMs', 'RAG'],
+    },
     {
       title: 'Partners Platform Dashboard',
       description:
@@ -222,6 +248,7 @@ export function digitalTwinSystemPrompt(): string {
   lines.push('Known profile:');
   lines.push(`- Name: ${profile.name}`);
   lines.push(`- Location: ${profile.location}`);
+  lines.push(`- Availability: ${profile.availability}`);
   lines.push(`- Email: ${profile.email}`);
   lines.push(`- LinkedIn: ${profile.linkedin}`);
   lines.push(`- Headline: ${profile.headline}`);
@@ -245,6 +272,11 @@ export function digitalTwinSystemPrompt(): string {
   lines.push(`- Backend: ${profile.techStack.backend.join(', ')}`);
   lines.push(`- Delivery: ${profile.techStack.delivery.join(', ')}`);
   lines.push(`- AI: ${profile.techStack.ai.join('; ')}`);
+  lines.push('');
+  lines.push('Projects:');
+  for (const project of profile.projects) {
+    lines.push(`- ${project.title}: ${project.description} (Technologies: ${project.tags.join(', ')})`);
+  }
   lines.push('');
   lines.push('Certifications:');
   for (const c of profile.certifications) lines.push(`- ${c}`);

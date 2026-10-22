@@ -106,31 +106,18 @@ export default function Home() {
           id="about"
           className="mt-24 rounded-[2rem] border border-slate-200/70 bg-white p-10 shadow-glow dark:border-slate-900/70 dark:bg-slate-950/60"
         >
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl font-semibold tracking-tight text-ink dark:text-slate-50">About</h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-                {profile.summary}
-              </p>
-              <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300">
-                Today, I’m especially interested in AI adoption that is practical: comparing models, setting up feedback loops, and
-                integrating tools into workflows so teams actually ship faster and make better decisions.
-              </p>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2">
-              {profile.skills.map((skill) => (
-                <div
-                  key={skill}
-                  className="rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-900/40 dark:text-slate-200"
-                >
-                  {skill}
-                </div>
-              ))}
-            </div>
+          <div className="max-w-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink dark:text-slate-50">About</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+              {profile.summary}
+            </p>
+            <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300">
+              Today, I’m especially interested in AI adoption that is practical: comparing models, setting up feedback loops, and
+              integrating tools into workflows so teams actually ship faster and make better decisions.
+            </p>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
             <div className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-900/70 dark:bg-slate-950/60">
               <h3 className="text-xl font-semibold text-ink dark:text-slate-50">Tech stack</h3>
               <div className="mt-5 space-y-4 text-sm text-slate-600 dark:text-slate-300">
@@ -163,6 +150,20 @@ export default function Home() {
                 <p className="mt-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Interests</p>
                 <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{profile.interests.join(' · ')}</p>
               </div>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold text-ink dark:text-slate-50">Skills</h3>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {profile.skills.map((skill) => (
+                <div
+                  key={skill}
+                  className="rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-900/40 dark:text-slate-200"
+                >
+                  {skill}
+                </div>
+              ))}
             </div>
           </div>
         </section>

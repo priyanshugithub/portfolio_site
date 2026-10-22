@@ -46,7 +46,7 @@ export default function Home() {
               <ButtonLink href="#experience" variant="secondary">
                 Career journey
               </ButtonLink>
-              <ButtonLink href="/Priyanshu_Tyagi_CV1.pdf" variant="secondary" target="_blank" download>
+              <ButtonLink href="/Priyanshu_Tyagi_CV.pdf" variant="secondary" target="_blank" download>
                 Download Resume (ATS)
               </ButtonLink>
               <ButtonLink href="#contact" variant="secondary">
@@ -150,35 +150,18 @@ export default function Home() {
             </div>
 
             <div className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-900/70 dark:bg-slate-950/60">
-              <h3 className="text-xl font-semibold text-ink dark:text-slate-50">Certifications & languages</h3>
-              <div className="mt-5 grid gap-6 sm:grid-cols-2">
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Certifications</p>
-                  <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                    {profile.certifications.map((c) => (
-                      <li key={c}>• {c}</li>
-                    ))}
-                  </ul>
-                  <p className="mt-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Learning now</p>
-                  <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                    {profile.currentLearning.map((c) => (
-                      <li key={c}>• {c}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Languages</p>
-                  <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                    {profile.languages.map((l) => (
-                      <li key={l.name}>
-                        <span className="font-semibold text-ink dark:text-slate-100">{l.name}</span> — {l.level}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Interests</p>
-                  <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{profile.interests.join(' · ')}</p>
-                </div>
+              <h3 className="text-xl font-semibold text-ink dark:text-slate-50">Languages & interests</h3>
+              <div className="mt-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Languages</p>
+                <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                  {profile.languages.map((l) => (
+                    <li key={l.name}>
+                      <span className="font-semibold text-ink dark:text-slate-100">{l.name}</span> — {l.level}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Interests</p>
+                <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{profile.interests.join(' · ')}</p>
               </div>
             </div>
           </div>

@@ -18,14 +18,14 @@ export const profile = {
   location: 'Berlin, Germany',
   email: 'priyanshumain@gmail.com',
   linkedin: 'https://www.linkedin.com/in/priyanshutyagi1996',
-  availability: 'Open to Fullstack Engineer roles in Munich. Available immediately and open to relocation.',
+  availability: 'Open to full-time opportunities in Berlin, available for regular on-site work and relocation.',
 
-  headline: 'Fullstack Engineer with 3+ years of experience building customer-facing applications with React, TypeScript, APIs, and AI integrations.',
+  headline: 'Fullstack Engineer with 3+ years of professional experience shipping production software, now focused on practical GenAI and automation.',
 
   focusNow: {
-    title: 'Exploring AI integrations and workflows',
+    title: 'Building practical GenAI and automation',
     description:
-      'Exploring practical AI integrations through agentic workflows, LLM evaluation, RAG systems, and monitoring loops that improve real business processes.',
+      'Focused on LLM API integration, RAG, n8n agent workflows, and AI-assisted development to turn process problems into working solutions.',
   },
 
   impactHighlights: [
@@ -52,60 +52,67 @@ export const profile = {
   ],
 
   summary:
-    'I am a Fullstack Engineer with 3+ years of experience building customer-facing applications with React, TypeScript, and JavaScript. I have integrated REST and GraphQL APIs and worked with Node.js, Express, PostgreSQL, Python, and Flask across product and personal projects. I also build AI-enabled applications with LLM APIs, RAG, and agentic workflows.',
+    'I am a Fullstack Engineer with 3+ years of professional experience building and shipping production software with React, TypeScript, Python/Flask, Node.js, REST/GraphQL, and SQL. I focus on practical GenAI and automation, including LLM API integration, RAG, n8n agent workflows, and AI-assisted development. My work includes Stripe payments across 12 countries, e-wallet and location-based APIs, and logistics features that improved route efficiency by 34%.',
 
   skills: [
+    'React',
+    'TypeScript',
     'JavaScript',
+    'Next.js',
     'HTML/CSS',
     'Tailwind CSS',
-    'TypeScript',
-    'ReactJS',
-    'Redux',
-    'Next.js',
+    'Responsive Design',
+    'Reusable Components',
+    'n8n',
+    'LLM API Integration',
+    'RAG',
+    'Embeddings and Vector Search',
+    'MCP',
+    'Multi-agent Systems',
+    'Voice Agents',
+    'Claude Code',
+    'Cursor',
+    'GitHub Copilot',
+    'OpenAI Codex',
     'Node.js',
-    'Express.js',
-    'PostgreSQL',
-    'SQL',
+    'Express',
     'Python',
     'Flask',
-    'Docker',
+    'SQL',
+    'PostgreSQL',
+    'REST',
+    'GraphQL',
+    'Stripe',
+    'Google Maps',
+    'CI/CD',
+    'Testing and Debugging',
     'Agile',
     'Scrum',
     'Git',
     'GitHub',
-    'GitLab',
-    'Agentic AI',
-    'LLMs and RAG',
-    'n8n',
+    'Performance Optimization',
   ],
 
   techStack: {
-    frontend: ['ReactJS', 'Next.js', 'TypeScript', 'Redux', 'Tailwind CSS', 'Styled Components', 'HTML/CSS', 'JavaScript'],
-    backend: ['Node.js', 'Express.js', 'PostgreSQL', 'Python (Flask)', 'SQL', 'REST APIs', 'GraphQL'],
-    delivery: ['Docker', 'Agile', 'Scrum', 'Git', 'GitHub', 'GitLab'],
+    frontend: ['React', 'TypeScript', 'JavaScript', 'Next.js', 'HTML/CSS', 'Tailwind CSS', 'Responsive Design', 'Reusable Components'],
+    backend: ['Node.js', 'Express', 'Python', 'Flask', 'SQL', 'PostgreSQL', 'REST', 'GraphQL', 'JSON APIs', 'Stripe', 'Google Maps'],
+    delivery: ['Git', 'GitHub', 'CI/CD', 'Testing', 'Debugging', 'Agile/Scrum', 'Performance Optimization'],
     ai: [
-      'Agentic AI',
-      'LLMs and RAG',
-      'LLM evaluation and comparison',
-      'Monitoring and feedback loops',
-      'n8n, Cursor, Vibe Code, OpenClaw',
+      'n8n agent workflows',
+      'LLM APIs (OpenAI, Gemini, Anthropic, OpenRouter)',
+      'RAG, embeddings, and vector search (Supabase)',
+      'MCP, multi-agent systems, and voice agents',
+      'AI-assisted development (Claude Code, Cursor, GitHub Copilot, OpenAI Codex)',
     ],
   },
 
   languages: [
-    { name: 'Hindi', level: 'Native / C2' },
-    { name: 'English', level: 'Full professional / C2' },
-    { name: 'German', level: 'B1 (actively learning)' },
+    { name: 'English', level: 'Native' },
+    { name: 'Hindi', level: 'Native' },
+    { name: 'German', level: 'B1 (learning actively)' },
   ],
 
   interests: ['Reading', 'Sports', 'Cooking', 'Painting'],
-
-  certifications: [],
-
-  currentLearning: [
-    'Udemy: AI Builder: Create Agents, Voice Agents & Automations in n8n (currently pursuing)',
-    'Udemy: AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents (currently pursuing)',
-  ],
 
   education: [
     {
@@ -127,40 +134,28 @@ export const profile = {
 
   experience: [
     {
-      role: 'Frontend Development Intern',
+      role: 'Fullstack Development Intern',
       company: 'irefill',
       period: 'Jan 2026 – Present',
       location: 'Remote',
       domain: 'Product Engineering',
       bullets: [
-        'Migrated a legacy PHP multi-page website to reusable, responsive React and Next.js components.',
-        'Integrated the existing PHP backend through a JSON API layer and implemented server-side rendering for SEO and initial page performance.',
-        'Used Tailwind CSS for responsive UI development and Claude Code to accelerate codebase analysis, migration, and debugging.',
-        'Identified a live spam-link injection vulnerability during a technical audit and documented remediation steps.',
+        'Migrated a legacy multi-page PHP website to reusable React and Next.js components for homepage, product, gallery, and blog pages.',
+        'Connected the new frontend to the existing PHP backend through a JSON API layer without requiring a backend rewrite.',
+        'Implemented server-side rendering with Next.js and Tailwind CSS to improve SEO and first-load performance.',
+        'Used Claude Code to accelerate analysis and implementation, then manually reviewed generated code and architectural decisions.',
       ],
     },
     {
-      role: 'Trainee Lead in Fashion',
-      company: 'Inditex',
+      role: 'Trainee Lead',
+      company: 'Inditex (Pull & Bear)',
       period: 'Apr 2026 – Jun 2026',
       location: 'Berlin, Germany',
       domain: 'Retail & Operations',
       bullets: [
-        'Completed a leadership program focused on commercial and store-operations analytics.',
-        'Unblocked onboarding by documenting bottlenecks and supporting decisions around AI architecture and workflow design.',
-        'Improved in-app operational visibility with real-time metrics and workflow-agent style orchestration.',
-      ],
-    },
-    {
-      role: 'Sales Assistant',
-      company: 'Uniqlo',
-      period: 'Sep 2025 – Dec 2025',
-      location: 'Berlin, Germany',
-      domain: 'Retail & Operations',
-      bullets: [
-        'Delivered customer-first service in German and English on a high-volume retail floor.',
-        'Handled replenishment, fitting rooms, delivery orders, stock routines, and merchandising standards.',
-        'Managed reservations and supported in-store tailoring orders and follow-ups.',
+        'Completed a three-month leadership development program focused on commercial operations, analytics, team coordination, and store management.',
+        'Analyzed an internal onboarding workflow, identified its main bottleneck, and proposed an AI-assisted solution to make information easier to find.',
+        'Coordinated a store team and used real-time performance data to prioritize daily operations.',
       ],
     },
     {
@@ -170,9 +165,10 @@ export const profile = {
       location: 'Gurugram, India',
       domain: 'Product Engineering',
       bullets: [
-        'Modernized two SaaS products with React 17, Redux, Hooks, and improved maintainability.',
-        'Delivered routing and tracking UX: trip optimization, real-time tracking, advanced filtering/sorting, and data visualization.',
-        'Improved operational flows by integrating APIs across shipment and invoicing experiences (GraphQL/REST).',
+        'Developed React and TypeScript interfaces for logistics operations, including real-time tracking, shipment data, and operational dashboards.',
+        'Built reusable components and integrated REST and GraphQL services with backend developers.',
+        'Contributed to trip-optimization functionality that improved route efficiency by 34%.',
+        'Improved shipment and invoicing workflows, contributing to a 27% gain in operational efficiency.',
       ],
     },
     {
@@ -182,9 +178,9 @@ export const profile = {
       location: 'Gurugram, India',
       domain: 'Product Engineering',
       bullets: [
-        'Shipped fintech UI for international transfers with Stripe payments across 12 countries.',
-        'Refactored a legacy React codebase to improve performance and reduce feature delivery friction.',
-        'Built reusable component foundations with TypeScript and Hooks.',
+        'Integrated Stripe payments for cross-border transactions in 12 countries, increasing payment success by 22%.',
+        'Refactored a legacy frontend into reusable React Hooks and TypeScript components to improve performance, modularity, and maintainability.',
+        'Built scalable components with Hooks and TypeScript.',
       ],
     },
     {
@@ -277,12 +273,6 @@ export function digitalTwinSystemPrompt(): string {
   for (const project of profile.projects) {
     lines.push(`- ${project.title}: ${project.description} (Technologies: ${project.tags.join(', ')})`);
   }
-  lines.push('');
-  lines.push('Certifications:');
-  for (const c of profile.certifications) lines.push(`- ${c}`);
-  lines.push('');
-  lines.push('Current learning:');
-  for (const c of profile.currentLearning) lines.push(`- ${c}`);
   lines.push('');
   lines.push('Education:');
   for (const ed of profile.education) {
